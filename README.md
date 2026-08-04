@@ -1,4 +1,4 @@
-# WhatsApp Automation Tool - LEGEND SHYAM  
+# WhatsApp Automation Tool - LEGEND SHYAM
 
 🚀 **Professional WhatsApp Automation Tool** with a two‑stage dashboard and full Telegram bot integration.  
 Built for 🇮🇳 **LEGEND SHYAM** – automate your WhatsApp messaging with ease.
@@ -12,12 +12,11 @@ Built for 🇮🇳 **LEGEND SHYAM** – automate your WhatsApp messaging with ea
 - [Two‑Stage Dashboard](#-two-stage-dashboard)
 - [Telegram Bot Integration](#-telegram-bot-integration)
 - [Prerequisites](#-prerequisites)
-- [Installation](#-installation)
+- [Installation & Deployment](#-installation--deployment)
 - [Configuration](#-configuration)
 - [Usage Guide](#-usage-guide)
 - [API Endpoints](#-api-endpoints)
 - [File Formats](#-file-formats)
-- [Deployment](#-deployment)
 - [Troubleshooting](#-troubleshooting)
 - [Branding & Support](#-branding--support)
 - [License](#-license)
@@ -35,7 +34,7 @@ Built for 🇮🇳 **LEGEND SHYAM** – automate your WhatsApp messaging with ea
 - **Live Progress** – real‑time logs, sent/failed counts, and stop control.
 - **Automatic Number Cleaning** – phone numbers are formatted automatically.
 - **Session Persistence** – credentials saved locally; no need to re‑pair on restart.
-- **Telegram Bot** – control everything from Telegram with inline buttons.
+- **Telegram Bot** – control everything from Telegram with inline buttons (no need to configure token – it's already built‑in).
 - **Anti‑Ban Protection** – minimum 5‑second delay between messages.
 - **Cross‑Platform** – runs on any Node.js environment.
 
@@ -64,18 +63,24 @@ Once the device is linked, the dashboard auto‑switches to:
 
 ## 🤖 Telegram Bot Integration
 
-The tool is fully controllable via the **[@Shyammd_143_bot](https://t.me/Shyammd_143_bot)** Telegram bot.
+This tool is fully controllable via the **[@Shyammd_143_bot](https://t.me/Shyammd_143_bot)** Telegram bot.
 
-### How It Works
-1. **Start the Bot** – send `/start` or click the **Start** button.
-2. **Inline Keyboard** – the bot presents a **“Connect WhatsApp”** button.
-3. **Click the Button** – the bot asks for your WhatsApp mobile number.
-4. **Enter Number** – send your number (with or without country code).
-5. **Pairing Code** – the bot returns an 8‑digit pairing code.
-6. **Link Device** – open WhatsApp → Settings → Linked Devices → Link with phone number, and enter the code.
-7. **Success** – the bot confirms connection and you can now send messages via Telegram commands.
+> **Important:** The bot token is **already embedded** in the source code (`index.js`). You **do not need** to provide any token or configure the bot. Just deploy the application and the bot will work out‑of‑the‑box.
+
+### How It Works (Step‑by‑Step)
+
+1. **Deploy the application** on your preferred hosting platform (Render, Railway, VPS, etc.).
+2. **Open Telegram** and search for **[@Shyammd_143_bot](https://t.me/Shyammd_143_bot)**.
+3. **Start the bot** – send `/start` or click the **Start** button.
+4. **Inline Keyboard** – the bot presents a **“Connect WhatsApp”** button.
+5. **Click the Button** – the bot asks for your WhatsApp mobile number.
+6. **Enter Number** – send your number (with or without country code, e.g., `9100000000` for India).
+7. **Pairing Code** – the bot returns an 8‑digit pairing code.
+8. **Link Device** – open WhatsApp → Settings → Linked Devices → Link with phone number, and enter the code.
+9. **Success** – the bot confirms connection and you can now send messages via Telegram commands or the web dashboard.
 
 ### Telegram Commands
+
 | Command | Description |
 |---------|-------------|
 | `/start` | Show welcome message and the **Connect WhatsApp** button. |
@@ -97,7 +102,9 @@ All Telegram interactions mirror the web dashboard functionalities, making remot
 
 ---
 
-## ⚙️ Installation
+## ⚙️ Installation & Deployment
+
+### Option 1: Deploy on Render / Railway / VPS
 
 1. **Clone the repository**
    ```bash
@@ -109,14 +116,7 @@ All Telegram interactions mirror the web dashboard functionalities, making remot
    ```bash
    npm install
    ```
-3. Configure environment
-   · Copy .env.example to .env (if provided) or create a new .env file.
-   · Set the desired PORT (default: 22019).
-   ```env
-   PORT=22019
-   TELEGRAM_BOT_TOKEN=your_bot_token_here   # optional, if you host the bot separately
-   ```
-4. Start the server
+3. Start the server
    ```bash
    npm start
    ```
@@ -124,16 +124,24 @@ All Telegram interactions mirror the web dashboard functionalities, making remot
    ```bash
    npm run dev
    ```
-5. Access the web dashboard
-   · Open your browser and go to http://localhost:22019
+4. Access the web dashboard
+   · Open your browser and go to http://localhost:22019 (or your deployed URL).
+
+Option 2: One‑Click Deploy (Recommended)
+
+· Render: https://render.com/images/deploy-to-render-button.svg
+· Railway: https://railway.app/button.svg
+· bot‑hosting.net: Use the one‑click deploy with Node.js environment.
+
+After deployment, the web dashboard will be live, and the Telegram bot @Shyammd_143_bot will automatically work with your instance (no extra configuration needed).
 
 ---
 
 🔧 Configuration
 
+· Environment Variables – Edit .env file if needed (default PORT: 22019).
 · Session Storage – session credentials are saved in the auth_info/ folder. Keep this folder safe; deleting it will require re‑pairing.
-· Environment Variables – all settings are in .env.
-· Telegram Bot – the bot token can be set in .env if you run the bot as part of this project. Alternatively, the bot can be hosted separately (the recommended approach is to use the already active @Shyammd_143_bot).
+· Telegram Bot – The bot token is already set inside index.js. You do not need to add any token to .env. The bot is ready to use immediately after deployment.
 
 ---
 
@@ -213,19 +221,6 @@ For bulk upload, list one number per line:
 
 ---
 
-🚀 Deployment
-
-You can deploy this tool on various platforms:
-
-· Render – use the Node.js environment.
-· Railway – simple one‑click deploy.
-· bot‑hosting.net – (legacy) use with your own server.
-· VPS / Any Cloud – standard Node.js deployment.
-
-Note: The Telegram bot @Shyammd_143_bot is already hosted and can be used directly with your deployed WhatsApp automation instance. Ensure your instance's API is accessible (or use the local web dashboard).
-
----
-
 🛠️ Troubleshooting
 
 Issue Solution
@@ -235,6 +230,7 @@ Messages not sending Verify WhatsApp is linked. Check that numbers are valid (wi
 Telegram bot doesn't respond Make sure you're using the correct bot @Shyammd_143_bot. Check your internet.
 “Invalid number” error Ensure the number includes the country code without + (e.g., 9100000000 for India).
 Session expired Delete the auth_info/ folder and re‑pair.
+Bot says "not connected" You need to pair your WhatsApp first using the bot or web dashboard.
 
 ---
 
@@ -265,4 +261,3 @@ For 🇮🇳 LEGEND SHYAM use only. Unauthorized distribution or commercial use 
 
 Happy Automating!
 LEGEND SHYAM – Making Automation Legendary.
-
