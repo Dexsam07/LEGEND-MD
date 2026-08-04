@@ -1,4 +1,3 @@
-```markdown
 # 📱 WhatsApp Automation Tool — LEGEND SHYAM
 
 [![Version](https://img.shields.io/badge/version-2.0-blue)](https://github.com/Dexsam07/LEGEND-MD)
@@ -219,5 +218,3 @@ Unauthorized distribution or commercial use is strictly prohibited.
 ---
 
 Made with ❤️ by LEGEND SHYAM — automating WhatsApp, one message at a time.
-
-```
