@@ -1,189 +1,223 @@
-# WhatsApp Automation Tool - LEGEND SHYAM
+```markdown
+# 📱 WhatsApp Automation Tool — LEGEND SHYAM
 
-[![Node.js](https://img.shields.io/badge/Node.js-16%2B-brightgreen)](https://nodejs.org/)
-[![WhatsApp](https://img.shields.io/badge/WhatsApp-Web--JS-blue)](https://wwebjs.dev/)
-[![License](https://img.shields.io/badge/License-LEGEND%20SHYAM-orange)](https://whatsapp.com/channel/0029VbBgXTsKwqSKZKy38w2o)
+[![Version](https://img.shields.io/badge/version-2.0-blue)](https://github.com/Dexsam07/LEGEND-MD)
+[![License](https://img.shields.io/badge/license-LEGEND%20SHYAM-red)](https://github.com/Dexsam07/LEGEND-MD)
+[![Node](https://img.shields.io/badge/node-%3E%3D16.0-brightgreen)](https://nodejs.org/)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-API-25D366)](https://whatsapp.com/)
 
-A professional WhatsApp automation tool featuring an improved two-stage dashboard for seamless pairing and messaging. Designed for 🇮🇳 **LEGEND SHYAM** use only.
-
----
-
-## 📌 Features
-
-### 🔹 Stage 1: Mobile Pairing (Initial Screen)
-- Clean, minimal dashboard showing only:
-  - Mobile number input field
-  - **GENERATE PAIR CODE** button
-  - Live console for logs
-
-### 🔹 Stage 2: Messaging (After Device Linking)
-- Message type selector: **Single** or **Multiple** numbers
-- **Single Number Mode**: Send to one number with custom speed
-- **Multiple Numbers Mode**: Add multiple numbers and send bulk messages
-- File upload for messages (`.txt` format)
-- Live progress tracking with statistics
-- Connection status display
-- Logout option
+> **Professional Two‑Stage WhatsApp Automation Dashboard**  
+> Built with ❤️ by **LEGEND SHYAM** — for 🇮🇳 LEGEND SHYAM use only.
 
 ---
 
-## 🛠 Prerequisites
+## 🚀 Overview
 
-- **Node.js** 16+ 
-- **npm** or **yarn**
+This tool provides a clean, secure, and efficient way to send bulk WhatsApp messages through a web interface.  
+It features a **two‑stage dashboard**:
+
+- **Stage 1 — Mobile Pairing:** Minimal screen to link your WhatsApp device using a pairing code.  
+- **Stage 2 — Messaging Dashboard:** After successful linking, you get full control to send messages to single or multiple recipients with adjustable speed and live progress.
 
 ---
 
-## 📦 Installation
+## ✨ Features
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-repo/whatsapp-automation.git
-   cd whatsapp-automation
+| Feature | Description |
+|---------|-------------|
+| 🔐 **Two‑Stage UI** | Clean separation of pairing and messaging; automatically switches after device linking. |
+| 📱 **Single Number Mode** | Send messages to one recipient with custom delay (minimum 5 seconds). |
+| 👥 **Multiple Numbers Mode** | Add a list of numbers, send bulk messages with controlled speed. |
+| 📂 **Message File Upload** | Upload a `.txt` file containing your message content. |
+| 📊 **Live Progress** | Real‑time console logs, round counters, and success/failure stats. |
+| ⏱ **Anti‑Ban Protection** | Configurable delay (min 5 seconds) between messages to avoid detection. |
+| 🔁 **Continuous Sending** | Messages are sent in a loop until you manually stop the process. |
+| 🧹 **Auto‑Formatting** | Phone numbers are cleaned automatically (removes extra characters). |
+| 🔄 **Session Persistence** | Credentials saved locally; no need to re‑pair on every restart. |
+| 🚪 **Logout Option** | Securely disconnect your WhatsApp session from the dashboard. |
+
+---
+
+## 📋 Prerequisites
+
+- **Node.js** (version 16 or higher)  
+- **npm** or **yarn**  
+- A WhatsApp account with an active mobile number.
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/Dexsam07/LEGEND-MD.git
+cd LEGEND-MD
 ```
 
 2. Install dependencies
-   ```bash
-   npm install
-   ```
-3. Configure environment
-   · Edit .env file if needed (default port is 22019)
+
+```bash
+npm install
+```
+
+3. Environment configuration
+
+Copy the example environment file and adjust if necessary:
+
+```bash
+cp .env.example .env
+```
+
+Edit .env to set your preferred port (default: 22019):
+
+```
+PORT=22019
+```
+
 4. Start the server
-   ```bash
-   npm start
-   ```
-   For development with auto-reload:
-   ```bash
-   npm run dev
-   ```
-5. Access the application
-   · Open your browser and navigate to: http://localhost:22019
+
+```bash
+npm start
+```
+
+For development with auto‑reload:
+
+```bash
+npm run dev
+```
+
+5. Access the dashboard
+
+Open your browser and go to:
+
+```
+http://localhost:22019
+```
 
 ---
 
-🚀 Usage
+🧭 Usage Guide
 
-Step 1: Mobile Pairing (Stage 1)
+Stage 1 — Mobile Pairing
 
-1. Enter your WhatsApp mobile number (e.g., 9100000000)
-2. Click GENERATE PAIR CODE
-3. Copy the 8‑digit code displayed in the console
-4. Open WhatsApp → Settings → Linked Devices → Link with phone number
-5. Enter the pairing code to connect
+1. On the initial screen, you see only a mobile number input and a “GENERATE PAIR CODE” button.
+2. Enter your WhatsApp mobile number (e.g., 9100000000 – country code without +).
+3. Click the button – an 8‑digit pairing code will appear in the live console.
+4. Open WhatsApp on your phone → Settings → Linked Devices → Link with phone number.
+5. Enter the 8‑digit code to link the device.
+6. Once linked, the dashboard automatically switches to Stage 2.
 
-✅ Once linked, the dashboard automatically switches to Stage 2.
+Stage 2 — Messaging Dashboard
 
-Step 2: Messaging Dashboard (Stage 2)
-
-After successful linking, you'll see:
-
-· SELECT MESSAGE TYPE section with two options:
-  · 📱 SINGLE NUMBER
-  · 👥 MULTIPLE NUMBERS
+After successful linking, you see two message type options:
 
 📱 Single Number Mode
 
-· Enter the recipient number
-· Set speed (minimum 5 seconds between messages)
-· Upload a .txt message file
-· Click START NOW
+· Enter the recipient’s phone number.
+· Set the delay between messages (minimum 5 seconds).
+· Upload a .txt file containing your message.
+· Click “START NOW” – messages will be sent repeatedly until you stop.
 
 👥 Multiple Numbers Mode
 
-· Add numbers one by one using the + ADD button
-· Set speed (minimum 5 seconds)
-· Upload a .txt message file
-· Click START NOW
+· Add numbers one by one using the “+ ADD” button.
+· Set the delay speed (minimum 5 seconds).
+· Upload your message file.
+· Click “START NOW” – the tool will cycle through the number list and send the message to each.
 
-Step 3: Monitor Progress
+Live Monitoring & Control
 
-· Watch the live console for real‑time updates
-· View statistics: Rounds, Sent, Failed
-· Click STOP SENDING to halt the process
+· The console panel shows real‑time logs, including sent/failed status and current round.
+· The “STOP SENDING” button immediately halts the sending process.
+· The “LOGOUT” button disconnects the WhatsApp session.
 
 ---
 
-📄 File Format
+📁 File Format
 
-Create a plain text file (.txt) with your message content:
+Message File (.txt)
+
+Create a plain text file with your message content. Example:
 
 ```
 Hello! This is an automated message.
 Please reply if you receive this.
 ```
 
----
-
-🔌 API Endpoints
-
-Method Endpoint Description
-POST /api/pair Request pairing code
-POST /api/start-send Start sending messages
-POST /api/stop-send Stop sending messages
-POST /api/upload-numbers Upload a file with numbers
-GET /api/status Get connection status
-POST /api/logout Logout from WhatsApp
+The tool reads the entire file content as the message to be sent.
 
 ---
 
-⚠️ Important Notes
+🌐 API Endpoints
 
-· Two‑Stage Design: Stage 1 only shows pairing; Stage 2 appears after successful linking.
-· Minimum delay: 5 seconds between messages (anti‑ban protection).
-· Auto‑cleaning: Phone numbers are automatically formatted.
-· Session credentials: Saved locally in auth_info/ directory.
-· Continuous sending: Messages continue until stopped manually.
-· File uploads: Temporary files are deleted after use.
+Endpoint Method Description
+/api/pair POST Request a pairing code for the given mobile number.
+/api/start-send POST Start sending messages (requires session active).
+/api/stop-send POST Stop the current sending process.
+/api/upload-numbers POST Upload a list of numbers (for multiple mode).
+/api/status GET Get current connection status.
+/api/logout POST Logout and clear the WhatsApp session.
+
+---
+
+🛠 Deployment
+
+Render / Railway / Heroku
+
+1. Push your code to a Git repository.
+2. Create a new web service on your chosen platform.
+3. Set the environment variable PORT (if needed) and start command npm start.
+4. Deploy – the dashboard will be accessible via the provided URL.
+
+Bot‑Hosting (e.g., legacy.bot-hosting.net)
+
+Follow the platform’s instructions to deploy your Node.js application.
+After deployment, provide your WhatsApp number to the bot to establish connection.
 
 ---
 
 🔧 Troubleshooting
 
-Connection Issues
-
-· Check console for detailed error messages.
-· Re‑pair if connection drops.
-· Ensure WhatsApp is properly linked.
-
-Pairing Code Not Appearing
-
-· Wait 5‑10 seconds after clicking GENERATE PAIR CODE.
-· Check browser console for errors.
-· Try with a different number.
-
-Messages Not Sending
-
-· Verify WhatsApp is properly linked.
-· Confirm that numbers are valid.
-· Ensure message file is in .txt format.
-· Review console logs for specific errors.
+Issue Solution
+Pairing code not shown Wait 5‑10 seconds; check browser console for errors; try with a different number.
+Connection fails Ensure your WhatsApp number is correctly entered (without +). Re‑pair if needed.
+Messages not sending Verify that the device is linked; check that numbers are valid; ensure the message file is .txt.
+Logs not updating Refresh the page; make sure WebSocket or long‑polling is active.
+Port already in use Change the PORT in .env and restart the server.
 
 ---
 
-☁️ Deployment Options
+📌 Important Notes
 
-You can deploy this bot on any cloud platform that supports Node.js, such as:
-
-· Render – render.com
-· Railway – railway.app
-· Bot‑Hosting.net – Legacy Bot Hosting
-
-Tip: After deployment, you can connect your Telegram bot (username: @Shyammd_143_bot) by providing your number, and it will automatically link to the deployed instance.
+· Minimum delay is 5 seconds between messages to respect WhatsApp’s anti‑spam policies and protect your account.
+· The tool does not store messages or numbers permanently; all data is held in memory and cleared on stop/logout.
+· Session credentials are stored locally in auth_info/ – do not share this folder.
+· For continuous sending, the process loops indefinitely until you press STOP.
 
 ---
 
-📢 Branding
+🤝 Contributing
 
-Powered by 🇮🇳 LEGEND SHYAM
-
-Join WhatsApp Channel
-Visit Website
+This project is maintained by LEGEND SHYAM.
+If you have suggestions or improvements, feel free to open an issue or pull request on the GitHub repository.
 
 ---
 
-📜 License
+📢 Connect
+
+· 📱 WhatsApp Channel: Join here
+· 🤖 Telegram Bot: @Shyammd_143_bot
+· 🐙 GitHub: Dexsam07/LEGEND-MD
+
+---
+
+📄 License
 
 For 🇮🇳 LEGEND SHYAM use only.
 Unauthorized distribution or commercial use is strictly prohibited.
 
 ---
+
+Made with ❤️ by LEGEND SHYAM — automating WhatsApp, one message at a time.
+
+```
