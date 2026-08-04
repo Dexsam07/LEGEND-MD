@@ -50,6 +50,7 @@ Deploy your own instance of this tool on your preferred platform with just one c
 | **Railway** | [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app) |
 | **Heroku** | [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com) |
 | **Katabump** | [![Deploy to Katabump](https://katabump.com/deploy-button.svg)](https://katabump.com/) |
+| **Bot‑Hosting.net** | [![Deploy to Bot-Hosting](https://legacy.bot-hosting.net/assets/deploy-button.svg)](https://legacy.bot-hosting.net/?aff=1340584978613932053) |
 
 > **Note:** The Telegram bot **@Shyammd_143_bot** is already configured and maintained by LEGEND SHYAM. You do **not** need to provide any bot token – everything is pre‑set in the code. Just deploy and the bot will work with your instance automatically.
 
@@ -159,7 +160,7 @@ You can deploy this tool on various platforms. The Telegram bot will work with a
 · Katabump – another hosting option.
     https://katabump.com/deploy-button.svg
 · Legacy Bot Hosting – use with your own server.
-    Legacy Bot Hosting
+    https://legacy.bot-hosting.net/assets/deploy-button.svg
 · VPS / Any Cloud – standard Node.js deployment.
 
 Important: The Telegram bot @Shyammd_143_bot is already hosted and maintained by LEGEND SHYAM. It will work with your deployed instance automatically, as long as your instance is reachable. No extra configuration is needed.
