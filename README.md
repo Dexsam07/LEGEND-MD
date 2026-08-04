@@ -134,4 +134,4 @@ Powered by **LEGEND SHYAM**
 
 ## License
 
-For MH LEGEND SHYAM use only.
+For 🇮🇳 LEGEND SHYAM use only.
