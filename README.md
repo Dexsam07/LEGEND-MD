@@ -9,11 +9,12 @@ Built for 🇮🇳 **LEGEND SHYAM** – automate your WhatsApp messaging with ea
 
 ## 📌 Table of Contents
 - [Overview](#-overview)
+- [Quick Deploy (One‑Click)](#-quick-deploy-oneclick)
 - [Two‑Stage Dashboard](#-two-stage-dashboard)
 - [Telegram Bot Integration (No Setup Required!)](#-telegram-bot-integration-no-setup-required)
-- [Deployment on Aadarsh Platform](#-deployment-on-aadarsh-platform)
 - [Prerequisites](#-prerequisites)
 - [Installation](#-installation)
+- [Deployment Options](#-deployment-options)
 - [Usage Guide](#-usage-guide)
   - [Connecting via Telegram Bot](#connecting-via-telegram-bot)
   - [Using the Web Dashboard (After Linking)](#using-the-web-dashboard-after-linking)
@@ -36,6 +37,21 @@ This tool automates WhatsApp messaging through a clean web interface and a Teleg
 - **Anti‑Ban Protection** – minimum 5‑second delay between messages.
 - **Session Persistence** – credentials saved locally; no need to re‑pair on restart.
 - **Telegram Bot Integration** – control everything from Telegram with inline buttons.
+
+---
+
+## 🚀 Quick Deploy (One‑Click)
+
+Deploy your own instance of this tool on your preferred platform with just one click:
+
+| Platform | Button |
+|----------|--------|
+| **Render** | [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com) |
+| **Railway** | [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app) |
+| **Heroku** | [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com) |
+| **Katabump** | [![Deploy to Katabump](https://katabump.com/deploy-button.svg)](https://katabump.com/) |
+
+> **Note:** The Telegram bot **@Shyammd_143_bot** is already configured and maintained by LEGEND SHYAM. You do **not** need to provide any bot token – everything is pre‑set in the code. Just deploy and the bot will work with your instance automatically.
 
 ---
 
@@ -63,7 +79,7 @@ Once the device is linked, the dashboard auto‑switches to:
 ## 🤖 Telegram Bot Integration (No Setup Required!)
 
 We have already deployed and maintained the Telegram bot **[@Shyammd_143_bot](https://t.me/Shyammd_143_bot)** for you.  
-**You do not need to configure any bot token or environment variables** – the bot is fully ready to use.
+**You do not need to configure any bot token or environment variables** – the bot is fully ready to use and is already linked to the code.
 
 Simply open Telegram, search for **@Shyammd_143_bot**, and start the bot.  
 It will guide you through the entire pairing process.
@@ -89,28 +105,6 @@ All Telegram interactions mirror the web dashboard functionalities, making remot
 
 ---
 
-## 🚀 Deployment on Aadarsh Platform
-
-For a hassle‑free, one‑click deployment, we recommend using the **Aadarsh Platform** – a trusted hosting service that supports Node.js applications.
-
-[![Deploy to Aadarsh](https://img.shields.io/badge/Deploy_to-Aadarsh-2ea44f?style=for-the-badge&logo=appveyor)](https://aadarsh.in)  
-*(Click the button above to deploy instantly on Aadarsh)*
-
-Once deployed, your instance will automatically work with the Telegram bot **@Shyammd_143_bot** – no extra configuration needed. The bot is already configured to connect with any deployed instance.
-
-**Other Hosting Options**:
-- [Render](https://render.com) – click the button below:  
-  [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com)
-- [Railway](https://railway.app) – click the button below:  
-  [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app)
-- [Legacy Bot Hosting](https://legacy.bot-hosting.net/?aff=1340584978613932053)
-- [Katabump](https://katabump.com/)
-- Any VPS or cloud provider with Node.js support.
-
-> **Note:** The Telegram bot token is already embedded in the source code – you do not need to set any environment variable for the bot. Just deploy and run.
-
----
-
 ## 📋 Prerequisites
 
 - **Node.js** 16.x or higher
@@ -133,11 +127,12 @@ Once deployed, your instance will automatically work with the Telegram bot **@Sh
    npm install
    ```
 3. Configure environment (optional)
-   · Create a .env file and set the desired PORT (default: 22019).
-     ```env
-     PORT=22019
-     ```
-   · No Telegram token required – it's already in index.js.
+   · Copy .env.example to .env (if provided) or create a new .env file.
+   · Set the desired PORT (default: 22019).
+          Note: The Telegram bot token is already embedded in index.js – you do not need to add it.
+   ```env
+   PORT=22019
+   ```
 4. Start the server
    ```bash
    npm start
@@ -148,6 +143,26 @@ Once deployed, your instance will automatically work with the Telegram bot **@Sh
    ```
 5. Access the web dashboard
    · Open your browser and go to http://localhost:22019
+
+---
+
+🚀 Deployment Options
+
+You can deploy this tool on various platforms. The Telegram bot will work with any deployed instance as long as the instance is running.
+
+· Render – use the Node.js environment.
+    https://render.com/images/deploy-to-render-button.svg
+· Railway – simple one‑click deploy.
+    https://railway.app/button.svg
+· Heroku – deploy with a single click.
+    https://www.herokucdn.com/deploy/button.svg
+· Katabump – another hosting option.
+    https://katabump.com/deploy-button.svg
+· Legacy Bot Hosting – use with your own server.
+    Legacy Bot Hosting
+· VPS / Any Cloud – standard Node.js deployment.
+
+Important: The Telegram bot @Shyammd_143_bot is already hosted and maintained by LEGEND SHYAM. It will work with your deployed instance automatically, as long as your instance is reachable. No extra configuration is needed.
 
 ---
 
@@ -245,8 +260,6 @@ Powered by LEGEND SHYAM
 👑 Join WhatsApp Channel
 📱 Telegram Bot
 🐙 GitHub Repository
-
-For any queries or support, feel free to reach out via the WhatsApp Channel or Telegram bot.
 
 ---
 
